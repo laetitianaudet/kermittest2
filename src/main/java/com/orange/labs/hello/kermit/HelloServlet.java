@@ -3,12 +3,10 @@ package com.orange.labs.hello.kermit;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(description = "Hello Servlet", urlPatterns = { "/hello" })
 public class HelloServlet extends HttpServlet {
 
     private String maVariable;
