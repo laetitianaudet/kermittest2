@@ -2,22 +2,33 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
-  <display-name>Hello Kermit</display-name>
-  <welcome-file-list>
-	<welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
-  
-  
-  <servlet>
-        <servlet-name>hello</servlet-name>
-        <servlet-class>com.orange.labs.hello.kermit.HelloServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_0.xsd http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="3.0">
+	
+	<display-name>Hello Kermit</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 
-    <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
-    
+<!-- 	<listener> -->
+<!-- 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> -->
+<!-- 	</listener> -->
+
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>com.orange.labs.hello.kermit.HelloServlet</servlet-class>
+<!-- 		<init-param> -->
+<!-- 			<param-name>contextConfigLocation</param-name> -->
+<!-- 			<param-value>/WEB-INF/hello-servlet.xml</param-value> -->
+<!-- 		</init-param> -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
 </web-app>
